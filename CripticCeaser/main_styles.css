@@ -1,0 +1,156 @@
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 10px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+/* Main styles */
+.container {
+  margin-top: 13.5rem;
+  border: 5px solid #000; /* Adds a dark border around the scrolling background image */
+}
+body {
+  color: #000000;
+  background-color: #000000;
+  font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  text-align: center;
+  /* img size is 50x50 */
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse 0.92s infinite; /* Adjust the duration to increase or decrease scrolling speed */
+  /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse 0.92s infinite; /* Adjust the duration to increase or decrease scrolling speed */
+  /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse 0.92s infinite; /* Adjust the duration to increase or decrease scrolling speed */
+  /* Opera 12+ */
+  animation: bg-scrolling-reverse 0.92s infinite; /* Adjust the duration to increase or decrease scrolling speed */
+  /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+  margin-top: 3rem; /* Adjust this value to reduce top spacing */
+  /* Other styles remain unchanged */
+}
+
+body {
+  font-family:'Courier New', Courier, monospace;
+  background-color: transparent;
+  
+}
+
+.header {
+  text-align: center;
+  margin-top: 100px;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.typewriter {
+  overflow: hidden; /* Ensures the text is not shown outside the box */
+  border-right: .15em solid rgb(0, 0, 0); /* The typewriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Centers the text */
+  font-size: 40px;
+  letter-spacing: .15em; /* Adjust spacing for a better typewriter effect */
+  max-width: 400px; /* Limits the width to prevent it from reaching the right end of the page */
+  animation: typing 6s steps(60, end), blink-caret .75s step-end infinite; /* Adjust animation duration and steps */
+}
+
+/* Blinking cursor animation */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: rgb(0, 0, 0); }
+}
+
+
+/*THIS IS THE END*/
+.slogan{
+  padding-left: 1200px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Add modern and stylish button styles */
+.stylish-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    background-color: gray;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .stylish-button:hover {
+    background-color: #000000fd;
+    letter-spacing: 3px;
+    box-shadow: #8e8e8e 0px 7px 29px 0px;
+  
+  }
+  .stylish-button:active{
+    background-color: #000000fd;
+    letter-spacing: 3px;
+    box-shadow: #8e8e8e 0px 7px 29px 0px;
+   transform:translateY(10px) 
+
+  }
+
+  .loginbutton{
+    padding-left: 1200px;
+  }
+  .edu{
+    font-family: 'Courier New', Courier, monospace;
+    color: grey;
+    font-style: normal;
+  }

@@ -1,0 +1,96 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://wallpaperaccess.com/full/2191017.jpg');
+   
+    font-weight: bold;
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  }
+  
+  .forgot-username-container {
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-color: #ffffff;
+    border-style: groove;
+    border-radius: 70px 7px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 5);
+    text-align: center;
+    width: 300px;
+  }
+  .forgot-username-container:hover{
+    transform:translateY(-15px);
+    backdrop-filter: blur(50px);
+    transition: transform 0.2s ease;  }
+  button {
+    background-color: #8d8d8d;
+    color: #fff;
+    cursor: pointer;
+    
+  }
+  
+  button:hover {
+    background-color: #989898;
+  }
+  h2 {
+    margin-top: 0;
+    color: #ffffff;
+  }
+  
+  p {
+    color: #ffffff;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+  }
+  
+  input[type="Email"],
+  button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 70px 7px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+  }
+  
+  button {
+    background-color: #8f8f8f;
+    color: #000000;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    transition: background-color 1s ease;
+  }
+  
+  button:hover {
+    background-color: #000000;
+    color:#8d8d8d
+  }
+  
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  

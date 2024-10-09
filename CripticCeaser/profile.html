@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="profile_style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>User Profile</h1>
+    <form id="profile-form">
+      <div class="form-group">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required>
+      </div>
+
+      <div class="form-group">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+      </div>
+
+      <div class="form-group">
+        <label for="institution">School/Institution:</label>
+        <input type="text" id="institution" name="institution">
+      </div>
+
+      <div class="form-group">
+        <label for="grade">Grade:</label>
+        <input type="text" id="grade" name="grade">
+      </div>
+
+      <div class="form-group">
+        <label for="interests">Area of Interest:</label>
+        <input type="text" id="interests" name="interests">
+      </div>
+
+      <div class="form-group">
+        <label for="bio">About Me:</label>
+        <textarea id="bio" name="bio"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="language">Language Preferences:</label>
+        <input type=text>
+          <!-- Add more options as needed -->
+        </select>
+      </div>
+
+      <div class="form-group">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+</body>
+
+<script>
+    document.getElementById("profile-form").onsubmit = function() {
+        // Redirect to the next page when the form is submitted
+        window.location.href = "resume_alert.html";
+        return false; // Prevent the form from actually submitting
+    };
+</script>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ROT13 Encoder/Decoder</title>
+  <style>
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 80%;
+      margin: 20px auto;
+      text-align: center;
+      
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+      margin: 10px 0;
+      padding: 5px;
+      resize: none;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: bolder;
+    }
+
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+      background-color: #000000;
+      font-family: 'Courier New', Courier, monospace;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #bebebe;
+      color:#000000;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>ROT13 Encoder/Decoder</h1>
+    <textarea id="inputText" placeholder="Enter text to encode or decode"></textarea>
+    <button onclick="encodeText()">Encode/Decode</button>
+    <textarea id="outputText" placeholder="Result will appear here" readonly></textarea>
+  </div>
+
+  <script>
+    function encodeText() {
+      const input = document.getElementById('inputText').value;
+      const output = document.getElementById('outputText');
+      
+      output.value = rot13(input);
+    }
+
+    function rot13(str) {
+      return str.replace(/[A-Za-z]/g, function(char) {
+        let offset = char <= 'Z' ? 65 : 97;
+        return String.fromCharCode((char.charCodeAt(0) - offset + 13) % 26 + offset);
+      });
+    }
+  </script>
+   <!---Certainly! The line let offset = char <= 'Z' ? 65 : 97; in the rot13() function is responsible for determining the ASCII value offset used to convert characters to their ROT13 equivalent.
+
+Explanation:
+
+In the ASCII table, the uppercase letters ('A' to 'Z') have ASCII values ranging from 65 to 90.
+The lowercase letters ('a' to 'z') have ASCII values ranging from 97 to 122.
+The purpose of the offset variable in this line of code is to determine the base ASCII value for the ROT13 transformation depending on whether the character being processed is uppercase or lowercase.
+
+The ternary operator (condition ? exprIfTrue : exprIfFalse) is used here. It checks whether the character's Unicode value is less than or equal to the Unicode value of 'Z' (i.e., it checks if the character is an uppercase letter)--> 
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CripticCeasar</title>
+    <link rel="icon" href="C:\Users\ranga\OneDrive\Documents\Desktop\CripticCeaser\images\104094-200.png" type="image/x-icon">
+    <link rel="stylesheet" href="_styles.css">
+    <style>
+   /* GLOBAL STYLES */
+/* Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+/* Global */
+html{
+  min-height: 100%;
+  overflow: hidden;
+}
+body{
+  height: calc(100vh - 8em);
+  padding: 3em;
+  color: rgba(25, 25, 25, 0.75);
+  font-family:'Courier New', Courier, monospace;  
+  background-color: rgb(141, 141, 141);  
+  
+}
+.line-1{
+    position: relative;
+    top: 10%;  
+    width: 2em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(117, 117, 117, 0.75);
+    font-size: 50px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-30%);    
+}
+
+#popup-container {
+  font-weight: bold;
+      width: 400px;
+      padding: 14px;
+      border-radius: 70px 7px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 5);
+      background-color: #fff;
+      opacity: 0;
+      transform: translateY(-50px);
+     
+    }
+
+    #popup-container.show {
+      opacity: 15;
+      transform: translateY(10px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+      color: #333;
+    }
+
+    p {
+      margin-bottom: 20px;
+      color: #666;
+      line-height: 2;
+    }
+
+    .pop{
+      padding-left: 524px;
+    }
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(33) 1s 1 normal both,
+             blinkTextCursor 400ms steps(100) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 25em;}
+}
+@keyframes blinkTextCursor{
+  from{
+    border-right-color: rgba(10, 10, 10, 0.75);}
+  to{border-right-color: transparent;
+  }
+  
+}
+    </style>
+</head>
+<body>
+  <div  class="line-1 anim-typewriter"><h1><b>CipherAcademy 🔒.com</b></h1></div>
+  <div class="pop">
+  <div id="popup-container">
+    <div id="popup-content">
+      <h2>🔒 Today's Security Tips</h2>
+      <p id="tip-text">Loading...</p>
+    </div>
+  </div>
+</div>
+  <script>
+    // Define an array of security tips
+    const securityTips = [
+      "Always use strong, unique passwords for your accounts. Enable Two-Factor Authentication (2FA) whenever possible.",
+      "Regularly update your software and operating system to patch security vulnerabilities.",
+      "Be cautious of phishing emails and never share sensitive information through suspicious links.",
+      "Backup your important data regularly to avoid data loss in case of security breaches.",
+      "Use a reputable antivirus and firewall software to protect your devices from malware.","Avoid using public Wi-Fi for sensitive activities, and use a VPN when necessary to encrypt your internet connection.",
+      "Always verify the legitimacy of emails and links before clicking to prevent falling victim to phishing scams.",
+      "Regularly review your privacy settings on social media platforms to control what information you share.",
+      "Enable a firewall to monitor and control incoming and outgoing network traffic for added security.",
+      "Backup your data regularly, preferably in multiple locations, to mitigate the impact of data breaches or system failures.",
+      "Be cautious when downloading and installing software from untrusted sources to avoid potential malware infections.",
+      "Use biometric authentication methods where available for an additional layer of security on devices.",
+      "Educate yourself and others about cybersecurity best practices to foster a safer online environment.",
+      "Consider using encrypted messaging apps for sensitive communications to protect your information from unauthorized access."
+    ];
+  
+    // Function to display a random security tip
+    function displayRandomTip() {
+      const tipIndex = Math.floor(Math.random() * securityTips.length);
+      const tipText = document.getElementById('tip-text');
+      tipText.textContent = securityTips[tipIndex];
+    }
+  
+    // Function to show the popup
+    function showPopup() {
+      const popup = document.getElementById('popup-container');
+      popup.classList.add('show');
+      displayRandomTip();
+    }
+  
+    // Function to close the popup
+    function closePopup() {
+      const popup = document.getElementById('popup-container');
+      popup.classList.remove('show');
+    }
+  
+    // Call the function to show the popup when the window loads
+    window.onload = showPopup;
+  </script>
+  
+  <div class="loginbutton"><button onclick="location.href='encryptions.html'" class="stylish-button" >Start Learning!</button></div>
+  
+  
+          
+          
+            
+</body>
+</html>

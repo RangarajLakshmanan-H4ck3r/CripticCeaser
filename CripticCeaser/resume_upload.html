@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>File Upload</title>
+<style>
+    .container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.inputfile {
+  display: none;
+}
+
+label {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+label:hover {
+  background-color: #2980b9;
+}
+
+.btn {
+  background-color: #2ecc71;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #27ae60;
+}
+
+    </style>
+</head>
+<body>
+<div class="container">
+  <h2>Upload a File</h2>
+  <form action="#" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" id="file" class="inputfile">
+    <label for="file">Choose a file</label>
+    <button type="submit" class="btn">Upload</button>
+  </form>
+</div>
+</body>
+</html>

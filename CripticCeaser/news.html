@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cyber Security News</title>
+  <style>
+   body {
+      font-family:'Courier New', Courier, monospace;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+
+    .news-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .news-item {
+      flex: 0 0 calc(50% - 20px);
+      margin-bottom: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .news-item:hover {
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .news-item img {
+      width: 100%;
+      height: auto;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    .news-content {
+      padding: 20px;
+    }
+
+    .news-content h2 {
+      font-size: 1.2rem;
+      margin-top: 0;
+      color: #333;
+    }
+
+    .news-content .button-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .news-content .button-container a {
+      padding: 10px 20px;
+      background-color: #979797;
+      color: #000000;
+      
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .news-content .button-container a:hover {
+      background-color: #000000;
+      color:#ffffff;
+    }
+
+    /* Style for the "View More News" button */
+    .view-more-button {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .view-more-button a {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #838383;
+      color: #000000;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .view-more-button a:hover {
+      background-color: #000000;
+      color:white;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="news-list">
+    <div class="news-item">
+      <img src="https://th.bing.com/th/id/OIP.7z2LTpYUR-IXbBtzIlZ0rwHaEK?w=328&h=185&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="News Image">
+      <div class="news-content">
+        <h2>Ukraine Targeted in Cyberattack Exploiting 7-Year-Old Microsoft Office Flaw</h2>
+        <div class="button-container">
+          <a href="#">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="news-item">
+      <img src="https://i.ytimg.com/vi/Fztuohj3Fck/maxresdefault.jpg" alt="News Image">
+      <div class="news-content">
+        <h2>Today's Top 4 Identity Threat Exposures: Where To Find Them and How To Stop Them</h2>
+        <div class="button-container">
+          <a href="#">Read More</a>
+        </div>
+      </div>
+    </div>
+    <!-- Add more news items as needed -->
+    <div class="news-item">
+      <img src="https://www.bing.com/th/id/OIP.aBQclGPFbbS5__HPTD0MWQHaD3?w=289&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="News Image">
+      <div class="news-content">
+        <h2>Bogus npm Packages Used to Trick Software Developers into Installing Malware</h2>
+        <div class="button-container">
+          <a href="#">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="news-item">
+      <img src="https://i.ytimg.com/vi/VXQI3BPnS4k/maxresdefault.jpg" alt="News Image">
+      <div class="news-content">
+        <h2>Severe Flaws Disclosed in Brocade SANnav SAN Management Software</h2>
+        <div class="button-container">
+          <a href="#">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- "View More News" button -->
+  <div class="view-more-button">
+    <a href="#">View More News</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Security Tips</title>
+  <link rel="icon" href="C:\Users\ranga\OneDrive\Documents\Desktop\CripticCeaser\images\104094-200.png" type="image/x-icon">
+  <style>
+    /* Styles for the popup */
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url('https://wallpaperaccess.com/full/2190927.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+      font-family: 'Courier New', Courier, monospace;
+
+    }
+
+    #popup-container {
+      width: 400px;
+      padding: 24px;
+      border-radius: 70px 7px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 5);
+      background-color: #fff;
+      opacity: 0;
+      transform: translateY(-50px);
+      transition: opacity 0.1s ease, transform 1s ease;
+    }
+
+    #popup-container.show {
+      opacity: 5;
+      transform: translateY(10px);
+      transition: opacity 0.5s ease, transform 1s ease;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+      color: #333;
+    }
+
+    p {
+      margin-bottom: 20px;
+      color: #666;
+      line-height: 2;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 30px 2px;
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #dedede;
+      color: #000000;
+      font-weight: bold;
+      border: 2px solid black;
+  box-shadow: 5px 5px rgb(0, 0, 0) ;
+    color: black;
+    border: none;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background-color: #000000fd;
+    letter-spacing: 2px;
+    box-shadow: #8e8e8e 0px 7px 29px 0px;
+  color: #ffffff;    }
+  button:active{
+    background-color: #000000fd;
+    letter-spacing: 3px;
+    box-shadow: #8e8e8e 0px 7px 29px 0px;
+    color: #ffffff;
+   transform:translateY(10px) 
+  }
+  </style>
+</head>
+<body>
+
+<div id="popup-container">
+  <div id="popup-content">
+    <h2>🔒 Today's Security Tips</h2>
+    <p id="tip-text">Loading...</p>
+    <a href="new_home.html"><button onclick="closePopup()">Continue...</button></a>
+  </div>
+</div>
+
+<script>
+  // Define an array of security tips
+  const securityTips = [
+    "Always use strong, unique passwords for your accounts. Enable Two-Factor Authentication (2FA) whenever possible.",
+    "Regularly update your software and operating system to patch security vulnerabilities.",
+    "Be cautious of phishing emails and never share sensitive information through suspicious links.",
+    "Backup your important data regularly to avoid data loss in case of security breaches.",
+    "Use a reputable antivirus and firewall software to protect your devices from malware.","Avoid using public Wi-Fi for sensitive activities, and use a VPN when necessary to encrypt your internet connection.",
+    "Always verify the legitimacy of emails and links before clicking to prevent falling victim to phishing scams.",
+    "Regularly review your privacy settings on social media platforms to control what information you share.",
+    "Enable a firewall to monitor and control incoming and outgoing network traffic for added security.",
+    "Backup your data regularly, preferably in multiple locations, to mitigate the impact of data breaches or system failures.",
+    "Be cautious when downloading and installing software from untrusted sources to avoid potential malware infections.",
+    "Use biometric authentication methods where available for an additional layer of security on devices.",
+    "Educate yourself and others about cybersecurity best practices to foster a safer online environment.",
+    "Consider using encrypted messaging apps for sensitive communications to protect your information from unauthorized access."
+  ];
+
+  // Function to display a random security tip
+  function displayRandomTip() {
+    const tipIndex = Math.floor(Math.random() * securityTips.length);
+    const tipText = document.getElementById('tip-text');
+    tipText.textContent = securityTips[tipIndex];
+  }
+
+  // Function to show the popup
+  function showPopup() {
+    const popup = document.getElementById('popup-container');
+    popup.classList.add('show');
+    displayRandomTip();
+  }
+
+  // Function to close the popup
+  function closePopup() {
+    const popup = document.getElementById('popup-container');
+    popup.classList.remove('show');
+  }
+
+  // Call the function to show the popup when the window loads
+  window.onload = showPopup;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SHA-256 Hashing</title>
+  <style>
+  /* Styles for both SHA-256 and RSA demo pages */
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 20px;
+  background-color: #f6f6f6;
+  font-weight: bolder;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+input[type="text"] {
+  padding: 8px;
+  margin: 8px 0;
+  width: calc(100% - 16px);
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+button {
+  padding: 10px;
+  background-color: #c3c3c3;
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #000000;
+  color:#c3c3c3;
+}
+
+p {
+  margin-top: 10px;
+  color: #666;
+}
+</style>
+
+</head>
+<body>
+  <h1>SHA-256 Hashing</h1>
+
+  <div class="container">
+    <input type="text" id="textToHash" placeholder="Enter text">
+    <button onclick="handleSHA256()">Calculate SHA-256 Hash</button>
+    <p id="sha256Result"></p>
+  </div>
+
+  <script src="sha256.js"></script> <!-- Link to your JavaScript file for SHA-256 -->
+</body>
+</html>
+
